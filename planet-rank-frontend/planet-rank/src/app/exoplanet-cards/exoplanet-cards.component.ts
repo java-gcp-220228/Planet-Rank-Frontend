@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExoplanetCardsComponent implements OnInit {
 
+  // var name: var type = var value
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 }

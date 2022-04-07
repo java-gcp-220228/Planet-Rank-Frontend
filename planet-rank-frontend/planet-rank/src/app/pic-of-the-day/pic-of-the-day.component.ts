@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PicOfTheDayComponent implements OnInit {
 
-  explanation:string = "This is a really cool Photo!"
+  explanation:string = "The vast Cosmos is beautiful and neverending\n\t - SpaceScripterJ"
   pictureOfTheDay: string = "https://apod.nasa.gov/apod/image/2204/Calif2Pleiades_Krcmarek_10000.jpg";
 
   constructor() { }

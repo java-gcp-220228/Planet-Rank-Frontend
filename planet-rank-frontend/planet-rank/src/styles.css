@@ -9,21 +9,15 @@
 }
 
 section {
-    padding: 20px 0px;
     display: flex;
-    width: 100vw;
-    height: auto;
+    width: 100%;
     min-height: 70vh;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    background-color: transparent;
 }
 
-.welcome-message {
-    width: 80%;
-    height: 25%;
-    display: flex;
-    justify-items: space-around;
-    flex-direction: column;
-    padding: 10px 0px;
+nav {
+    height: 20vh;
 }
