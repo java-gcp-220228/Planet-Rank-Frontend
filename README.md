@@ -1,45 +1,27 @@
-# Developers
-  - Javanshir Pashayev
-  
-  - Bryce Fransen
-  - Jack Ziegler
-  - Ankur Shahi
-  #
+# PlanetRank
 
-## Project Name
-Planet Rank
-#  
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
-## Team Name
-spaceScripters
-#
+## Development server
 
-## Project Idea
-User can create an account and login. User can purchase/unlock a planet and add it to their collection. Users can accumulate a collection of planets and display their collection for people to see.
-#
-## Project Description
-Allow people to create a user account and buy different types of planets. Planets will have interesting information about each one of them, and can be displayed in a users collection.
-#
-## User Stories
-#### 1 
-User logs in and wants to view different exoplanets and their details. User clicks on the exoplanet tab, and gets taken to a page of different cards detailing planets. The user can scroll through the gallery and hover over a card to flip it and see the planet details.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-#### 2
-User logs in and wants to view images of different planets. User clicks on the planet image tab, and gets taken to an image gallery. The user can scroll through the gallery and view all the different planets.
-#
-## Technologies
-    NASA Exoplanet Archive API 
-    Angular2
-    Spring
-    Gradle 
-    Java
-    JDBC
-    Git
-    JJwt
-    logback
-    Jenkins
-    Github Actions
-    Sonar Cloud
-    JaCoCo
-    JUnit/Mockito
-    Firebase/GCP Compute Engine/GCP Cloud Storage
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
