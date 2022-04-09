@@ -1,14 +1,17 @@
 nav {
+    padding-top: 10px;
+    padding-bottom: 20px;
     display: flex;
     width: 100%;
-    height: 150px;
+    height: 20vh;
     flex-direction: column;
     justify-content: space-around;
-    text-align: center;
-    background-color: aqua;
+    background-color: black;
 }
 
 nav h1 {
+    align-self: center;
+    width: 25%;
     padding: 10px;
     cursor: pointer;
     transition: all 200ms ease-in;
@@ -17,15 +20,39 @@ nav h1 {
 
 a {
     text-decoration: none;
-    color: black;
+    padding: 10px;
+    transition: all 400ms ease-in-out;
+}
+
+.nav-bar-hr {
+    padding: 4px;
+    background-color: white;
+    align-self: center;
+    border-radius: 10px;
+    width: 90%;
+    transition: all 1000ms ease-in-out;
 }
 
 .nav-bar-links {
     display: flex;
     justify-content: space-around;
+    color: white;
 }
 
 nav h1:hover, a:hover {
-    color: darkblue;
+    color: #C9FFE2;
+    box-shadow: 1px 1px 15px 3px #809848;
+    border-radius: 12px;
+}
 
+nav h1:hover {
+    box-shadow: 1px 1px 15px 3px #005E7C;
+}
+
+.nav-bar-hr:hover {
+    background-color: #48BEFF;
+    border-color: #48BEFF;
+    width: 25%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 35px 3px #005E7C;
 }

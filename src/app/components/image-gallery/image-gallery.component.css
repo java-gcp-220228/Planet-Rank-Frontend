@@ -1,4 +1,9 @@
-img {
-    width: 200px;
-    height: 200px;
+.image-gallery {
+    width: 100vw;
+    height: auto;
+}
+
+.image-gallery-container {
+    width: 100%;
+    height: 100%;
 }
