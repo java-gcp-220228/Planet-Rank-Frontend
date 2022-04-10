@@ -1,8 +1,0 @@
-:host { /* This is a pseudo-class selector referring to the componenet itself */
-    display: inline-block;
-}
-
-img {
-    width: 200px;
-    height: 200px;
-}

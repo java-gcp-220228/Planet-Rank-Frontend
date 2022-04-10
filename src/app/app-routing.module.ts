@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ImageGalleryComponent } from './image-gallery/image-gallery.component';
-import { ExoplanetCardsComponent } from './exoplanet-cards/exoplanet-cards.component';
-import { LoginComponent } from './login/login.component';
-import { LogoutComponent } from './logout/logout.component';
-import { PicOfTheDayComponent } from './pic-of-the-day/pic-of-the-day.component';
+import { ImageGalleryComponent } from './components/image-gallery/image-gallery.component';
+import { PicOfTheDayComponent } from './components/pic-of-the-day/pic-of-the-day.component';
+import { ExoplanetCardsComponent } from './components/exoplanet-cards/exoplanet-cards.component';
+import { LoginComponent } from './components/login/login.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 const routes: Routes = [
   {path: 'image-gallery', component: ImageGalleryComponent}, 
