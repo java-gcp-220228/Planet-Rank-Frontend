@@ -4,17 +4,17 @@
         <div class="login-header">
             <h1>Enter Username & Password</h1>
         </div>
-        <div class="login-credentials">
+        <form class="login-credentials" [formGroup]="loginForm">
             <div class="credentials-username">
                 <label for="username">Username</label>
-                <input [(ngModel)]="username" id="username" type="text"/>
+                <input id="username" type="text" formControlName="username"/>
             </div>
             <div class="credentials-password">
                 <label for="password">Password</label>
-                <input [(ngModel)]="password" id="password" type="password"/>
+                <input id="password" type="password" formControlName="password"/>
             </div>
             <button (click)="loginUser()" id="login-button">Login</button>
-        </div>
+        </form>
     </div>
     
 </section>

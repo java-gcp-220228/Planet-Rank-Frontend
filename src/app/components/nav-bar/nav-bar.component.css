@@ -7,16 +7,18 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     background-color: black;
-    transition: all 250ms ease-in;
+    transition: all 400ms ease-in;
+    box-shadow: 1px 1px 10px #005E7C;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 nav h1 {
     align-self: center;
     width: 25%;
-    padding: 10px;
     cursor: pointer;
-    transition: all 200ms ease-in;
-    border-bottom: 1px solid black;
+    transition: all 400ms ease-in;
+    padding: 10px;
 }
 
 a {
@@ -26,12 +28,13 @@ a {
 }
 
 .nav-bar-hr {
-    padding: 4px;
-    background-color: white;
+    padding: 1px;
+    background-color: #005E7C;
+    border-color: #005E7C;
     align-self: center;
     border-radius: 10px;
-    width: 90%;
-    transition: all 1000ms ease-in-out;
+    width: 25%;
+    transition: all 400ms ease-in;
 }
 
 .nav-bar-links {
@@ -51,13 +54,20 @@ nav h1:hover {
 }
 
 nav:hover{
-    box-shadow: 1px 1px 35px 3px #005E7C;
+    box-shadow: 1px 1px 35px 3px #48BEFF;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 nav:hover .nav-bar-hr{
+    padding: 4px;
     background-color: #48BEFF;
     border-color: #48BEFF;
-    width: 25%;
+    width: 85%;
     border-radius: 5px;
-    box-shadow: 1px 1px 35px 3px #005E7C;
+}
+
+nav:hover h1.nav-header {
+    display: block;
+    visibility: visible;
 }

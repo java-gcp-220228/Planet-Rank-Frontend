@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { LoginService } from 'app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,47 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  username!: string;
-  password!: string;
-  token!: string;
+  errorMessage!: string;
+  loginForm!: FormGroup;
 
-  constructor() { }
-
+  constructor(private fb: FormBuilder, private loginService: LoginService)  {}
+  
   ngOnInit(): void {
-  }
-
-  async loginUser() {
-    const postLoginURL = 'http://localhost:8080/login';
-    const jsonString = JSON.stringify({
-      "username": this.username,
-      "password": this.password
+    this.loginForm = this.fb.group({
+      username: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
     });
-
-    console.log(jsonString);
-
-    let res = await fetch(postLoginURL, {
-      method: 'POST',
-      body: jsonString,
-  });
-
-    this.token = res.headers.get('token')!;
-    localStorage.setItem('jwt', this.token);
     
-console.log(jsonString);
-
-    if (res.status === 200) {
-      let user = await res.json();
-
-      console.log(user);
-
-      localStorage.setItem('user_id', user.id);
-      localStorage.setItem('username', user.username);
-
-    } else {
-      let error = await res.text();
-      console.log(error);
-    }
+    this.loginService.loginErrorSubject.subscribe((errMessage) => {
+      this.errorMessage = errMessage;
+    });
   }
 
+  loginUser() {
+
+    const user = this.loginForm.value;
+    console.log(user);
+    this.loginService.authenticateUser(user.username, user.password);
+  }
 
 }
