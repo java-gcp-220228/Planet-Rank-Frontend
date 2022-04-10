@@ -33,6 +33,8 @@ export class LoginComponent implements OnInit {
     this.token = res.headers.get('token')!;
     localStorage.setItem('jwt', this.token);
     
+console.log(jsonString);
+
     if (res.status === 200) {
       let user = await res.json();
 
