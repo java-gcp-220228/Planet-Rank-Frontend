@@ -1,7 +1,6 @@
 .login {
     width: 100vw;
     height: 80vh;
-
 }
 
 .login-container {
@@ -51,6 +50,22 @@ input {
     align-self: center;
     justify-self: center;
     padding: 20px;
+}
+
+#login-button {
+    outline: none;
+}
+
+#login-button {
+    align-self: center;
+    width: 15%;
+    color: #C9FFE2;
+}
+
+#login-button:hover {
+    box-shadow: 1px 1px 20px 5px #C9FFE2;
+    border: none;
+    border-radius: 35px;
 }
 
 
