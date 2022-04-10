@@ -17,9 +17,9 @@ export class ExoplanetCardsComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginService.getUserInfoFromJwt().subscribe((res) => {
-      // const user: User = res.body;
 
-      // this.username = user.username;
+    this.username = res.body?.username;
+
     }, err => {
       if (err.status === 401) {
         this.router.navigate(['/login']);
