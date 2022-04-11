@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { PodImage } from '../../PodImage';
+import { PodImage } from '../../models/PodImage';
 import { PictureOfTheDayService } from '../../services/picture-of-the-day.service';
 
 @Component({

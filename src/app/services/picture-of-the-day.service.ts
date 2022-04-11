@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PodImage } from '../PodImage';
+import { PodImage } from '../models/PodImage';
 
 @Injectable({
   providedIn: 'root'

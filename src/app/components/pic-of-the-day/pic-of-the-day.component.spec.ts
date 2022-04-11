@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PicOfTheDayComponent } from './pic-of-the-day.component';
 
 describe('PicOfTheDayComponent', () => {
