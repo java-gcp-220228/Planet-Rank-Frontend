@@ -45,7 +45,7 @@ To-do list:
 
 ## Usage
 
-[Landing Page](<img width="2021" alt="Screen Shot 2022-04-11 at 4 13 58 PM" src="https://user-images.githubusercontent.com/79622822/162825118-aaf10913-eb1b-4cf4-b1c0-45373e661b1f.png">)
+[Landing Page](img width="2021" alt="Screen Shot 2022-04-11 at 4 13 58 PM" src="https://user-images.githubusercontent.com/79622822/162825118-aaf10913-eb1b-4cf4-b1c0-45373e661b1f.png)
 [Login]()
 [Exoplanet Cards]()
 [Card Comments]()
