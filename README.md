@@ -45,12 +45,18 @@ To-do list:
 
 ## Usage
 
-[Landing Page](https://user-images.githubusercontent.com/79622822/162825118-aaf10913-eb1b-4cf4-b1c0-45373e661b1f.png)
-[Login]()
-[Exoplanet Cards]()
-[Card Comments]()
-[Gallery]()
-[Gallery Comments]()
+Landing Page
+![Landing Page](https://user-images.githubusercontent.com/79622822/162825118-aaf10913-eb1b-4cf4-b1c0-45373e661b1f.png)
+Login Page
+![Login](https://user-images.githubusercontent.com/79622822/162826593-92325a9d-b037-4385-9ed1-6d608b013f56.png)
+Exoplanet Cards
+![Exoplanet Cards](https://user-images.githubusercontent.com/79622822/162826806-d82ebd6c-ace0-4185-8528-6d4f9796d100.png)
+Card Comments
+![Card Comments](https://user-images.githubusercontent.com/79622822/162827940-a8d67c92-e2ca-4594-a0b2-4e7497b36fdf.png)
+Gallery
+![Gallery](https://user-images.githubusercontent.com/79622822/162826687-d3ca8599-4181-4b5f-b232-391b323499ba.png)
+Gallery Comments
+![Gallery Comments](https://user-images.githubusercontent.com/79622822/162827940-a8d67c92-e2ca-4594-a0b2-4e7497b36fdf.png)
 
 ## Contributors
   - Javanshir Pashayev
