@@ -10,6 +10,13 @@ import { User } from 'app/models/user';
   styleUrls: ['./exoplanet-cards.component.css']
 })
 export class ExoplanetCardsComponent implements OnInit {
+  title = 'Card View Demo';
+
+  gridColumns = 3;
+
+  toggleGridColumns() {
+    this.gridColumns = this.gridColumns === 3 ? 4 : 3;
+  }
 
   username: any;
 
