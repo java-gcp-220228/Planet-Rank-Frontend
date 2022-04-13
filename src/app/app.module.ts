@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
@@ -41,6 +41,10 @@ import { InterceptorService } from './services/interceptor.service';
     FlexLayoutModule,
     
   ],
+  schemas:[NO_ERRORS_SCHEMA
+  
+  ],
+
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
   ],

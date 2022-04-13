@@ -1,17 +1,15 @@
 
+mat-toolbar {
+    justify-content: space-between;
+}
 
 .content {
     padding: 16px;
+}
+
+.content > mat-card {
+    margin-bottom: 16px;
+}
+.btn{
     background-color: aliceblue;
 }
-
-.mat-card-title{
-    color: red;
-}
-
-
-
-
-
-
-

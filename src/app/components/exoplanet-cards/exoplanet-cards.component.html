@@ -1,25 +1,4 @@
 
-  <div class="content">
-    <div fxLayout="row wrap" fxLayoutGap="16px grid">
-      <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1,2,3,4,5,6,7,8,9,10]">
-        <mat-card class="mat-card">
-          <mat-card-header>
-            <mat-card-title>Exoplanets {{num}}</mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <p>
-                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button class = "btn" mat-button>Like</button>
-            <button mat-button style=
-            "background-color:blue; 
-             color:white">Comment</button>
-          </mat-card-actions>
-        </mat-card>
-      </div>
-    </div>
-  </div>
-        
-    
+<div *ngFor = "let post of posts | async">
+  {{post | json}};
+</div>
