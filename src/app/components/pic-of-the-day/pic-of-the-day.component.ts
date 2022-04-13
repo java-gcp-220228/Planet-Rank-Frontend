@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { PodImage } from '../../models/PodImage';
 import { PictureOfTheDayService } from '../../services/picture-of-the-day.service';
 
@@ -14,11 +15,10 @@ export class PicOfTheDayComponent implements OnInit {
   // declare a PodImage type variable to hold the image object
   pod!: PodImage;
   
-
-  explanation:string = "This is a really cool Photo!"
   // pictureOfTheDay: string = "https://apod.nasa.gov/apod/image/2204/Calif2Pleiades_Krcmarek_10000.jpg";
   // declare a variable for the picture url
   pictureOfTheDay: string="";
+  title: string = "";  
 
 
   // Dependency injection (Constructor injection)
@@ -35,7 +35,7 @@ export class PicOfTheDayComponent implements OnInit {
 
       console.log(this.pod);
       this.pictureOfTheDay = this.pod.hdurl;
-
+      this.title = this.pod.title;
     })
   }
 
