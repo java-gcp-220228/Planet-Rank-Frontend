@@ -28,14 +28,25 @@ export class PicOfTheDayComponent implements OnInit {
   
   ngOnInit(): void {
     // call the getPicture function during component intitaion.
-    this.getPictureOfTheDay();
+    // this.getPictureOfTheDay();
+    this.pictureOfTheDayService.getImage();
+    this.pictureOfTheDayService.data.subscribe((image)=>{
+      this.pod = image;
+
+      console.log(this.pod);
+      this.pictureOfTheDay = this.pod.hdurl;
+
+    })
   }
 
-  async getPictureOfTheDay(){
-    // fecth image object from service
-    this.pod = await this.pictureOfTheDayService.getImage();
-    // Assign image url from the image object to the picture variable
-    this.pictureOfTheDay = this.pod.url;
-  }
+//  getPictureOfTheDay(){
+//     // fecth image object from service
+//     // this.pod = await this.pictureOfTheDayService.getImage();
+//     this.pod = this.pictureOfTheDayService.data.subscribe(())
+//     // Assign image url from the image object to the picture variable
+//     console.log(this.pod);
+//     console.log("I am the flash");
+//     this.pictureOfTheDay = this.pod.url;
+//   }
   
 }
