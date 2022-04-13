@@ -11,7 +11,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./exoplanet-cards.component.css']
 })
 export class ExoplanetCardsComponent implements OnInit {
-   = 'http://localhost:8080/exoplanets';
   posts: any;
 
   username: any;
@@ -19,8 +18,8 @@ export class ExoplanetCardsComponent implements OnInit {
   constructor(private loginService: LoginService, private router: Router, private http: HttpClient) { }
 
   getPosts(){
-    this.posts = this.http.get(this.ROOT_URL);
-    console.log(this.posts);
+    //this.posts = this.http.get(this.BACKEND_URL);
+    //console.log(this.posts);
 
   }
 
