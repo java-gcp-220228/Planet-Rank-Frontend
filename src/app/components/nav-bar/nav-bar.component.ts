@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { LoginService } from 'app/services/login.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  loginService!: LoginService;
+  constructor() {}
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
+
   }
 
+  loggedIn() {
+    return (localStorage.getItem('jwt') != undefined);
+  }
+
+  logoutUser() {
+    localStorage.removeItem('jwt');
+    localStorage.removeItem('user_info');
+  }
 }

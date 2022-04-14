@@ -3,11 +3,22 @@
 }
 
 .pic-of-the-day {
+    background-color: transparent;
     width: 99vw;
-    height: 80vh;
+    min-height: 40vh;
+    height: 60vh;
+    border-radius: 20%;
 }
 
 .pic-of-the-day-container {
-    width: 100%;
+    width: auto;
     height: 100%;
+}
+
+.pic-of-the-day-title {
+    padding: 25px;
+}
+
+img {
+    border-radius: 10px;
 }

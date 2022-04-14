@@ -4,7 +4,8 @@
     <div class="nav-bar-links">
         <a [routerLink] = "'/image-gallery'">Gallery</a>
         <a [routerLink] = "'/exoplanets'">Exoplanets</a>
-        <a [routerLink] = "'/login'">Login</a>
+        <a *ngIf="loggedIn()" [routerLink] = "'/login'" (click)="logoutUser()">Logout</a>
+        <a *ngIf="!loggedIn()" [routerLink] = "'/login'">Login</a>
     </div>
 </nav>
 
