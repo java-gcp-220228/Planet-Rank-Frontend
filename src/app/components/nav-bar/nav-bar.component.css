@@ -1,3 +1,7 @@
+* {
+    background-color: #000;
+}
+
 nav {
     padding: 0px 10px;
     margin-bottom: 28px;
@@ -6,7 +10,6 @@ nav {
     height: 20vh;
     flex-direction: column;
     justify-content: space-around;
-    background-color: black;
     transition: all 400ms ease-out;
     box-shadow: 1px 1px 10px #005E7C;
     border-bottom-left-radius: 8px;
@@ -22,6 +25,7 @@ nav h1 {
 }
 
 a {
+    background-color: transparent;
     text-decoration: none;
     padding: 10px;
     transition: all 400ms ease-in-out;
