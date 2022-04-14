@@ -1,12 +1,25 @@
-<section class="exoplanet-cards">
-    
-    <div class="exoplanet-cards-header">
-        <h1>Exoplanet Cards</h1>
-        <h1>Welcome {{ username }}!</h1>
-    </div>
 
-        
-    <div class="exoplanet-cards-container">
-    </div>
-    
-</section>
+
+    <div class = "rows">
+
+
+      <div *ngFor = "let post of exoCards | async; let indexOfElement = index" class="flip-card"  >
+           <div class="flip-card-inner">
+               <div class="flip-card-front">
+                 <h1 class = "front-h1">{{post.planetName}}</h1>
+                 <p>Rarity:  &nbsp;&nbsp;</p>
+               </div>
+               <div class="flip-card-back">
+                 <p>Host Name:  &nbsp;&nbsp;{{post.hostName}}</p>
+                   <p>NumberOfStars:  &nbsp;{{post.numberOfStars}}</p>
+                     <p>Discovery Year:  &nbsp; &nbsp;{{post.discoverYear}}</p>
+                       <p>Planet Mass:  &nbsp;&nbsp;{{post.planetMass}} times larger than earth</p>
+                         <p>Distance From Earth:  &nbsp;&nbsp;{{post.distanceFromEarth}} light years</p>
+                        <button class = "comment-btn">Comments</button>
+               </div>
+             </div>
+             
+                
+           </div>
+     
+         </div>
