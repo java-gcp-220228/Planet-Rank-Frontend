@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'app/services/login.service';
-import { User } from 'app/models/user';
 import { HttpClient } from '@angular/common/http';
 import { ExoplanetCards } from 'app/models/exoplanetCard';
 import { Observable } from 'rxjs';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import * as $ from 'jquery';
+
 @Component({
   selector: 'app-exoplanet-cards',
   templateUrl: './exoplanet-cards.component.html',
@@ -56,11 +55,6 @@ export class ExoplanetCardsComponent implements OnInit {
     })
 
   }
-
-  flipped() {
-    console.log('weewe')
-    $('.card').toggleClass('flipped');
-}
 
 
   

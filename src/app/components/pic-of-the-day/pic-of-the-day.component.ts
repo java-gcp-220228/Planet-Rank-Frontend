@@ -32,8 +32,6 @@ export class PicOfTheDayComponent implements OnInit {
     this.pictureOfTheDayService.getImage();
     this.pictureOfTheDayService.data.subscribe((image)=>{
       this.pod = image;
-
-      console.log(this.pod);
       this.pictureOfTheDay = this.pod.hdurl;
       this.title = this.pod.title;
     })
