@@ -4,6 +4,7 @@
 }
 
 .login-container {
+    background-color: black;
     display: flex;
     width: 50%;
     height: 50%;
