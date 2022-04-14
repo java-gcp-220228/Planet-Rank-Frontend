@@ -1,11 +1,7 @@
-<section class="image-gallery">
-    
-    <div class="image-gallery-header">
-        <h1>Exoplanet Gallery</h1>
-    </div>
+<div class="image-gallery-container">
+<div *ngFor="let image of images" class="gallery">
 
-        
-    <div class="image-gallery-container">
-    </div>
-    
-</section>
+    <img [src]="image.thumbUrl" [alt]="image.title" (click)="getOrigUrl(image.origUrl)">
+
+</div>
+</div>

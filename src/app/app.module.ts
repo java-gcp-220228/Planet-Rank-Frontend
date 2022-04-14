@@ -13,7 +13,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './services/interceptor.service';
 import { NgParticlesModule } from 'ng-particles';
 import { ParticleBackgroundComponent } from './components/particle-background/particle-background.component';
-
+import { NasaImageApiService } from './service/nasa-image-api.service'
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { ParticleBackgroundComponent } from './components/particle-background/pa
   
   ],
 
-  providers: [
+  providers: [ NasaImageApiService,
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
   ],
   bootstrap: [AppComponent]
