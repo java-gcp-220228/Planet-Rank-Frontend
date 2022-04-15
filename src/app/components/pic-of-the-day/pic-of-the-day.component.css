@@ -5,8 +5,7 @@
 .pic-of-the-day {
     background-color: transparent;
     width: 99vw;
-    min-height: 40vh;
-    height: 60vh;
+    height: auto;
     border-radius: 20%;
 }
 

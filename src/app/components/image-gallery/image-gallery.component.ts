@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NasaImageApiService } from '../../service/nasa-image-api.service';
-import { DatabaseResponse } from '../../models/app.model.databaseResponse';
+import { NasaImageApiService } from '../../services/nasa-image-api.service';
 import { Image } from '../../models/app.model.image'
 @Component({
   selector: 'app-image-gallery',
