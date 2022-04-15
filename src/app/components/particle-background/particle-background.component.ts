@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { MoveDirection, ClickMode, HoverMode, OutMode, Engine, Modes } from "tsparticles-engine";
+import { MoveDirection, ClickMode, HoverMode, OutMode, Engine, Container, getRandomRgbColor, rgbToHsl, tsParticles } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 
 @Component({
@@ -10,9 +10,6 @@ import { loadFull } from "tsparticles";
 export class ParticleBackgroundComponent {
 
   particleId: string = "particleId";
-  red: string = "0";
-  green: string = "0";
-  blue: string = "40";
 
   constructor() {}
 
@@ -45,22 +42,16 @@ export class ParticleBackgroundComponent {
     },
     particles: {
       color: {
-        value: "rgb(" +
-         Math.floor((Math.random() * 300) + 44).toString() + "," + 
-         Math.floor((Math.random() * 300) + 44).toString() + "," + 
-         Math.floor((Math.random() * 300) + 44).toString() + ")"
+        value: "#fff"
       },
       links: {
         color: {
-          value: "rgb(" +
-          Math.floor((Math.random() * 300) + 44).toString() + "," + 
-          Math.floor((Math.random() * 300) + 44).toString() + "," + 
-          Math.floor((Math.random() * 300) + 44).toString() + ")"
+          value: "#888"
         },
         distance: 80,
         enable: true,
         opacity: 0.7,
-        width: 1
+        width: 2
       },
       collisions: {
         enable: false
@@ -73,7 +64,8 @@ export class ParticleBackgroundComponent {
         },
         random: true,
         speed: 2,
-        straight: false
+        straight: false,
+        vibrate: false,
       },
       number: {
         density: {
@@ -83,24 +75,41 @@ export class ParticleBackgroundComponent {
         value: 100
       },
       opacity: {
-        value: 0.9
+        value: 0.7
       },
       shape: {
-        type: "polygon",
+        type: "circle",
       },
       size: {
-        value: {min: 1, max: 4 },
+        value: {min: 0.5, max: 10 },
       }
     },
     detectRetina: true
   };
   async particlesInit(engine: Engine): Promise<void> {
-    console.log(engine);
-
-    // Starting from 1.19.0 you can add custom presets or shape here, using the current tsParticles instance (main)
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
-  }
 
+    // await tsParticles.addParticleUpdater("color-rand", () => {
+    //   return {
+    //     init: (particle) => {
+    //       const newHsl = rgbToHsl(getRandomRgbColor(78));  
+    //       particle.color!.h.value = newHsl.h;
+    //       particle.color!.s.value = newHsl.s;
+    //       particle.color!.l.value = newHsl.l;
+    //     },
+    //     update: () => {
+    //       /* nothing */
+    //     },
+    //     isEnabled: () => true,
+    //   };
+    // });
+  
+    // await tsParticles.load("tsparticles", {
+    //   background: {
+    //     color: "#000"
+    //   }
+
+    // });
+
+  }
 }
