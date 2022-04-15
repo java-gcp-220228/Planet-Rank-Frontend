@@ -14,6 +14,9 @@ import { InterceptorService } from './services/interceptor.service';
 import { NgParticlesModule } from 'ng-particles';
 import { ParticleBackgroundComponent } from './components/particle-background/particle-background.component';
 import { NasaImageApiService } from './service/nasa-image-api.service'
+import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+
+
 
 @NgModule({
   declarations: [
@@ -32,14 +35,16 @@ import { NasaImageApiService } from './service/nasa-image-api.service'
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   schemas:[NO_ERRORS_SCHEMA
   
   ],
 
-  providers: [ NasaImageApiService,
-    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
+
+  providers: [ NasaImageApiService, NgbActiveModal,
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true } 
   ],
   bootstrap: [AppComponent]
 })
