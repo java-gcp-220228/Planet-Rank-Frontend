@@ -1,3 +1,5 @@
+import { ExoplanetCardComments } from "./exoplanetCardComments";
+
 export interface ExoplanetCards{
     exoId: number;
     planetName: string;
@@ -7,6 +9,9 @@ export interface ExoplanetCards{
     discoverYear: number;
     planetMass: number;
     distanceFromEarth: number;
+    likeCount: number;
+    cardRank: string;
+    comments: ExoplanetCardComments[];
     
     
 }
