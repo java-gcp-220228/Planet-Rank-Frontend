@@ -13,6 +13,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './services/interceptor.service';
 import { NgParticlesModule } from 'ng-particles';
 import { ParticleBackgroundComponent } from './components/particle-background/particle-background.component';
+import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -32,14 +33,16 @@ import { ParticleBackgroundComponent } from './components/particle-background/pa
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   schemas:[NO_ERRORS_SCHEMA
   
   ],
 
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
+    NgbActiveModal
   ],
   bootstrap: [AppComponent]
 })
