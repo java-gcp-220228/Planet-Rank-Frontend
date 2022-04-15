@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { MoveDirection, ClickMode, HoverMode, OutMode, Engine } from "tsparticles-engine";
+import { MoveDirection, ClickMode, HoverMode, OutMode, Engine, Modes } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 
 @Component({
@@ -10,6 +10,9 @@ import { loadFull } from "tsparticles";
 export class ParticleBackgroundComponent {
 
   particleId: string = "particleId";
+  red: string = "0";
+  green: string = "0";
+  blue: string = "40";
 
   constructor() {}
 
@@ -26,63 +29,67 @@ export class ParticleBackgroundComponent {
       events: {
         onClick: {
           enable: true,
-          mode: ClickMode.push
+          mode: ClickMode.repulse
         },
         onHover: {
           enable: true,
-          mode: HoverMode.repulse
+          mode: HoverMode.attract
         },
         resize: true
       },
       modes: {
-        pull: {
-          quantity: 4
-        },
         repulse: {
-          distance: 50,
-          duration: 0.4
+          distance: 350,
         }
       }
     },
     particles: {
       color: {
-        value: "#ffffff"
+        value: "rgb(" +
+         Math.floor((Math.random() * 300) + 44).toString() + "," + 
+         Math.floor((Math.random() * 300) + 44).toString() + "," + 
+         Math.floor((Math.random() * 300) + 44).toString() + ")"
       },
       links: {
-        color: "#C9FFE2",
-        distance: 75,
+        color: {
+          value: "rgb(" +
+          Math.floor((Math.random() * 300) + 44).toString() + "," + 
+          Math.floor((Math.random() * 300) + 44).toString() + "," + 
+          Math.floor((Math.random() * 300) + 44).toString() + ")"
+        },
+        distance: 80,
         enable: true,
         opacity: 0.7,
         width: 1
       },
       collisions: {
-        enable: true
+        enable: false
       },
       move: {
-        direction: MoveDirection.right,
+        direction: MoveDirection.outside,
         enable: true,
         outModes: {
           default: OutMode.out
         },
-        random: false,
-        speed: 6,
+        random: true,
+        speed: 2,
         straight: false
       },
       number: {
         density: {
           enable: true,
-          area: 1500
+          area: 1000
         },
-        value: 80
+        value: 100
       },
       opacity: {
-        value: 0.5
+        value: 0.9
       },
       shape: {
-        type: "circle"
+        type: "polygon",
       },
       size: {
-        value: {min: 1, max: 5 },
+        value: {min: 1, max: 4 },
       }
     },
     detectRetina: true
@@ -95,4 +102,5 @@ export class ParticleBackgroundComponent {
     // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
   }
+
 }

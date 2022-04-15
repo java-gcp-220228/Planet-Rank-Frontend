@@ -14,6 +14,7 @@ nav {
     box-shadow: 1px 1px 10px #005E7C;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    background-color: #000;
 }
 
 nav h1 {
