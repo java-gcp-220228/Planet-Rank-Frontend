@@ -42,4 +42,30 @@ export class LoginService {
         this.loginErrorSubject.next(errorMessage);
       })
   }
+
+  createUser(username: string, password: string) {
+
+    const newUser: any = {
+      'username': username,
+      'password': password,
+      'role': {
+        "id": 1,
+        "role": "member"
+      }
+    };
+
+    console.log(newUser);
+    this.client.post<User>(`${environment.BACKEND_URL}/user`, newUser, {
+      'observe': 'response'
+    }).subscribe(
+        res => {
+          if (res.status === 200) {
+            this.authenticateUser(username, password);
+          }
+        }
+      , err => {
+        const errorMessage = err.error;
+        this.loginErrorSubject.next(errorMessage);
+      })
+  }
 }
