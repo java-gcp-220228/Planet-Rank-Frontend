@@ -6,9 +6,11 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     transition: all 400ms ease-out;
+    
 }
 
 nav h1 {
+    color: #809848;
     margin-top: 50px;
     align-self: center;
     width: 25%;
@@ -20,7 +22,7 @@ nav h1 {
 
 a {
     background-color: transparent;
-    color: #C9FFE2;
+    color: #809848;
     text-decoration: none;
     padding: 10px;
     transition: all 400ms ease-in-out;
@@ -40,8 +42,6 @@ a {
     background-color: transparent;
     display: flex;
     justify-content: space-around;
-    color: white;
-    font-size: 0px;
     transition: all 250ms ease-in-out;
     padding-bottom: 40px;
 }
@@ -53,19 +53,13 @@ nav h1:hover, a:hover {
 }
 
 nav h1:hover {
-    box-shadow: 1px 1px 15px 3px #005E7C;
-}
-
-
-nav:hover .nav-bar-links {
-    display: flex;
-    font-size: 15px;
+    box-shadow: 1px 1px 15px 3px #F02040;
 }
 
 nav:hover hr.nav-bar-hr{
     padding: 4px;
-    border: 1px solid #48BEFF;
-    background-color: #48BEFF;
+    border: 1px solid #F02040;
+    background-color: #F02040;
     width: 85%;
     border-radius: 5px;
     opacity: 1.0;
