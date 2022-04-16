@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NasaImageApiService } from '../../services/nasa-image-api.service';
-import { Image } from '../../models/app.model.image'
+import { Image } from '../../models/app.model.image';
+import { ImageService } from '../../services/image.service';
+
 @Component({
   selector: 'app-image-gallery',
   templateUrl: './image-gallery.component.html',
@@ -12,7 +14,10 @@ export class ImageGalleryComponent implements OnInit {
 
    public images: Image[] = [];
   
-  constructor(private nasaImageApiService: NasaImageApiService) { }
+  constructor(
+    private nasaImageApiService: NasaImageApiService,
+    private imageService: ImageService
+  ) {}
 
   ngOnInit() {
     this.nasaImageApiService.getImages().subscribe(data => this.images = data);
@@ -20,6 +25,9 @@ export class ImageGalleryComponent implements OnInit {
   }
 getOrigUrl(url: string) {
   window.open(url, "_blank");
+}
+setImageInfo(image: Image) {
+  this.imageService.setImageInfo(image)
 }
 
 

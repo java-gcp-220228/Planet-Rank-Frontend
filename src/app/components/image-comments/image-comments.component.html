@@ -1,0 +1,22 @@
+<div class="img-container">
+    <a (click)="getOrigUrl(imgLink.src)">
+        <img #imgLink [src] = "largeUrl" />
+    </a>
+</div>
+<div class="comment-container">
+    <div class="container justify-content-center mt-5 border-left border-right">
+        <div class="d-flex justify-content-center pt-3 pb-2">
+            <input #commentinput type="text" name="text" placeholder="+ Add a comment" class="form-control addtxt">
+        </div>
+        <button class="submit-btn" (click)="sendComment(commentinput)">Submit</button>
+        <div *ngFor = "let comment of imageComments | async">
+            <div class="d-flex justify-content-center py-2">
+                <div class="second py-2 px-2"> <span class="text1">{{ comment.comment }}</span>
+                    <div class="d-flex justify-content-between py-1 pt-2">
+                        <div><span class="text3">Posted {{ getTimeDif(comment.uploadDate) }} Days Ago By <strong class="author-name">{{ comment.authorName }}</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

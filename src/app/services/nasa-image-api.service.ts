@@ -8,8 +8,7 @@ import { Image } from '../models/app.model.image'
 @Injectable()
 export class NasaImageApiService {
 
-  db_api = "http://localhost:8080/nasa_images/images";
-
+  db_api = "http://localhost:8080/images";
   constructor(private http: HttpClient) { }
 
   getImages(): Observable<Image[]> {
