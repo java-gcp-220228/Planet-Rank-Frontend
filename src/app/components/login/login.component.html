@@ -2,6 +2,7 @@
     
     <div class="login-container">
         <div class="login-header">
+            <h1>Login</h1>
             <h1>Enter Username & Password</h1>
         </div>
         <form class="login-credentials" [formGroup]="loginForm">
@@ -13,7 +14,25 @@
                 <label for="password">Password</label>
                 <input id="password" type="password" formControlName="password"/>
             </div>
-            <button (click)="loginUser()" id="loggit in-button">Login</button>
+            <button (click)="loginUser()" id="login-button">Login</button>
+        </form>
+    </div>
+
+    <div class="login-container">
+        <div class="login-header">
+            <h1>Sign Up</h1>
+            <h1>Create Username & Password</h1>
+        </div>
+        <form class="login-credentials" [formGroup]="signUpForm">
+            <div class="credentials-username">
+                <label for="username">Username</label>
+                <input id="username" type="text" formControlName="username"/>
+            </div>
+            <div class="credentials-password">
+                <label for="password">Password</label>
+                <input id="password" type="password" formControlName="password"/>
+            </div>
+            <button (click)="signUpUser()" id="login-button">Sign up</button>
         </form>
     </div>
     
