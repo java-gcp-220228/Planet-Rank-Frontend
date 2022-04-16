@@ -13,9 +13,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './services/interceptor.service';
 import { NgParticlesModule } from 'ng-particles';
 import { ParticleBackgroundComponent } from './components/particle-background/particle-background.component';
-import { NasaImageApiService } from './service/nasa-image-api.service'
+import { NasaImageApiService } from './services/nasa-image-api.service'
 import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { ImageCommentsComponent } from './components/image-comments/image-comments.component';
+import { ImageService } from './services/image.service';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
     ExoplanetCardsComponent,
     LoginComponent,
     LogoutComponent,
-    ParticleBackgroundComponent
+    ParticleBackgroundComponent,
+    ImageCommentsComponent
   ],
   imports: [
     NgParticlesModule,
@@ -43,7 +45,7 @@ import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   ],
 
 
-  providers: [ NasaImageApiService, NgbActiveModal,
+  providers: [ NasaImageApiService, NgbActiveModal, ImageService,
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true } 
   ],
   bootstrap: [AppComponent]
