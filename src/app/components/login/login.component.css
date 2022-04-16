@@ -68,7 +68,7 @@ input {
 }
 
 #login-button:hover {
-    box-shadow: 1px 1px 20px 5px #C9FFE2;
+    box-shadow: 1px 1px 20px 5px #809848;
     border: none;
     border-radius: 35px;
 }
@@ -144,19 +144,6 @@ Sign - Up
 Sign - Up
 */
 
-.back-button-for-login-page-container{
-    background-color: black;
-    display: flex;
-    width: 35%;
-    height: 70%;
-    padding: 20px 0px;
-    border: 3px solid #005E7C;
-    border-radius: 20px;
-    flex-direction: column;
-    justify-content: space-around;
-    transition: all 400ms ease-out;
-}
-
 .default-container {
     background-color: black;
     display: flex;
@@ -198,7 +185,7 @@ Sign - Up
 }
 
 .default-button:hover {
-    box-shadow: 1px 1px 20px 5px #005E7C;
+    box-shadow: 1px 1px 20px 5px #F02040;
     border: none;
     border-radius: 35px;
 }

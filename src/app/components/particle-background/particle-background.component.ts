@@ -40,11 +40,11 @@ export class ParticleBackgroundComponent {
     },
     particles: {
       color: {
-        value: "#fff"
+        value: "#F02040"
       },
       links: {
         color: {
-          value: "#888"
+          value: "#005E7C"
         },
         distance: 80,
         enable: true,
