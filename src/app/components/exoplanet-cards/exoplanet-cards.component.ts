@@ -33,7 +33,6 @@ export class ExoplanetCardsComponent implements OnInit {
   constructor(public activeModal: NgbActiveModal, private loginService: LoginService, private router: Router, private http: HttpClient) {
     const userInfo = localStorage.getItem("user_info");
     if(userInfo){this.loggedIn=true};
-    window.alert(userInfo);
    }
 
   getPosts(){
