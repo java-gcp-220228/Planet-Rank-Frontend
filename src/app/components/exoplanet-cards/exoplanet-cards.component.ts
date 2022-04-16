@@ -27,28 +27,61 @@ export class ExoplanetCardsComponent implements OnInit {
   username: any;
   clicked = false;
   modalService: any;
+  exoLikes!: Observable<ExoplanetCards[]>;
+  loggedIn = false;
   
   constructor(public activeModal: NgbActiveModal, private loginService: LoginService, private router: Router, private http: HttpClient) {
+    const userInfo = localStorage.getItem("user_info");
+    if(userInfo){this.loggedIn=true};
    }
 
   getPosts(){
     this.exoCards = this.http.get<ExoplanetCards[]>(this.BACKEND_URL + '/exoplanets');
+  }
+
+  disableBtn(num: number){
+    document.getElementById('disable-' + num)!.style.display = "none";
+    document.getElementById('enable-'+num)!.style.display = "block";
 
   }
+
+
+
+
+
+
+  postComment(exoId: number, commentInput:string){
+    exoId = exoId +1;
+  this.http.post<ExoplanetCardComments>('http://localhost:8080/1/' + exoId, {"comment" : commentInput}).subscribe(data => {}
+   
+  )
+  alert("Posted Comment!"); 
+  window.location.reload();
+}
+
+  getNewLike(likeCount: number){
+    return likeCount + 1;
+  }
   likeBtn(exoId: number){
+
     exoId = exoId +1;
     console.log(exoId);
     this.http.post<ExoplanetLikes>('http://localhost:8080/like', {"exoplanetId" : exoId}).subscribe(data => {
-      this.exoplanetLikeId = data.exoId;
+
   })
-  window.location.reload();
+  
+  //window.location.reload();
   }
 
   
-  open() {
-    // const modalRef = this.modalService.open(ModalComponent);
-    const modalRef = this.modalService.open(this.activeModal);
-    modalRef.componentInstance.title = 'About';
+  showModal(index: number){
+    document.getElementById('change-modal-' +index)!.style.display = "block";
+    document.getElementById('hideThis-' + index)!.style.display = "none";
+  }
+
+  closeModal(index: number){
+    document.getElementById('change-modal-' +index)!.style.display = "none";
+    document.getElementById('hideThis-' +index)!.style.display = "block";
   }
 
   ngOnInit(): void {

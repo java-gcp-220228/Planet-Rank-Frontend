@@ -87,7 +87,7 @@ justify-content: space-between;
 }   
 .btns{
   display: flex;
-  font-size:30px;
+  font-size:35px;
   margin-left:15px;
   
 }
@@ -95,15 +95,65 @@ justify-content: space-between;
   color: purple;
   cursor: pointer;
 }
-.comment-btn{
-  margin-left: 85px;
-  margin-top: 85px;
-}
+
 .like-btn{
-  margin-top: 85px;
-  margin-left:85px;
+  margin-top: 35px;
+  margin-left:75px;
+}
+
+.like-btnn{
+  margin-top: 35px;
+  margin-left:65px;
+  display: none;
+}
+
+.comment-btn{
+  margin-left: 35px;
+  margin-top: 40px;
 }
 .comment-btn:hover {
+  color: purple;
+  cursor: pointer;
+}
+
+.modal-dialog{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: none;
+  background-color: black;
+
+}
+.modal-header{
+  background-color: black;
+}
+.modal-title{
+  background-color: black;
+  margin-left: 50px;
+  color:white;
+}
+.modal-body p{
+  background-color: black;
+  color: white;
+}
+.modal-body {
+  background-color: black;
+  height: 200px;
+  overflow-y: auto;
+}
+.close-btn{
+  color:white;
+}
+.close-btn:hover{
+  color: purple;
+  cursor: pointer;
+}
+.modal-footer{
+  background-color: black;
+}
+.newComment-btn{
+  color: white;
+}
+.newComment-btn:hover{
   color: purple;
   cursor: pointer;
 }

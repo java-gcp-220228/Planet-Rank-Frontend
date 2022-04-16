@@ -4,10 +4,10 @@
 
 .pic-of-the-day {
     background-color: transparent;
-    width: 99vw;
-    min-height: 40vh;
-    height: 60vh;
+    width: 95vw;
+    height: auto;
     border-radius: 20%;
+    opacity: 0.95;
 }
 
 .pic-of-the-day-container {
