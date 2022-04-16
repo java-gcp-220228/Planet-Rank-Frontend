@@ -28,9 +28,11 @@ export class ExoplanetCardsComponent implements OnInit {
   clicked = false;
   modalService: any;
   exoLikes!: Observable<ExoplanetCards[]>;
-  
+  loggedIn = false;
   
   constructor(public activeModal: NgbActiveModal, private loginService: LoginService, private router: Router, private http: HttpClient) {
+    const userInfo = localStorage.getItem("user_info");
+    if(userInfo){this.loggedIn=true};
    }
 
   getPosts(){

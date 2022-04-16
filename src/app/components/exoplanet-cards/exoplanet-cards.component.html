@@ -24,7 +24,7 @@
                        
                        </div> 
                     </div>
-                    <div class="modal-footer">
+                    <div *ngIf="loggedIn" class="modal-footer">
                         <input type = "text" id = "newComment" placeholder="Add a comment....." #usercomment>  
                       <button type="button" class="newComment-btn" (click)="postComment(indexOfElement,usercomment.value)">Post</button>
                     </div>
