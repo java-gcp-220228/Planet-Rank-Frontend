@@ -3,7 +3,6 @@ import { NasaImageApiService } from '../../services/nasa-image-api.service';
 import { Image } from '../../models/app.model.image';
 import { ImageService } from '../../services/image.service';
 
-
 @Component({
   selector: 'app-image-gallery',
   templateUrl: './image-gallery.component.html',

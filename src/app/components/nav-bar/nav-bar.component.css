@@ -1,31 +1,28 @@
-* {
-    background-color: #000;
-}
-
 nav {
-    padding: 0px 10px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
     display: flex;
     width: 100%;
-    height: 20vh;
+    height: 25vh;
     flex-direction: column;
     justify-content: space-around;
     transition: all 400ms ease-out;
-    box-shadow: 1px 1px 10px #005E7C;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    
 }
 
 nav h1 {
+    color: #809848;
+    margin-top: 50px;
     align-self: center;
     width: 25%;
     cursor: pointer;
     transition: all 400ms ease-in;
     padding: 10px;
+    font-size: 2em;
 }
 
 a {
     background-color: transparent;
+    color: #809848;
     text-decoration: none;
     padding: 10px;
     transition: all 400ms ease-in-out;
@@ -42,9 +39,11 @@ a {
 }
 
 .nav-bar-links {
+    background-color: transparent;
     display: flex;
     justify-content: space-around;
-    color: white;
+    transition: all 250ms ease-in-out;
+    padding-bottom: 40px;
 }
 
 nav h1:hover, a:hover {
@@ -54,24 +53,19 @@ nav h1:hover, a:hover {
 }
 
 nav h1:hover {
-    box-shadow: 1px 1px 15px 3px #005E7C;
+    box-shadow: 1px 1px 15px 3px #F02040;
+}
+
+nav:hover hr.nav-bar-hr{
+    padding: 4px;
+    border: 1px solid #F02040;
+    background-color: #F02040;
+    width: 85%;
+    border-radius: 5px;
+    opacity: 1.0;
 }
 
 nav:hover{
-    box-shadow: 1px 1px 25px 3px #48BEFF;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-nav:hover .nav-bar-hr{
-    padding: 4px;
-    background-color: #48BEFF;
-    border-color: #48BEFF;
-    width: 85%;
-    border-radius: 5px;
-}
-
-nav:hover h1.nav-header {
-    display: block;
-    visibility: visible;
+    background-color: #000;
+    position: relative;
 }

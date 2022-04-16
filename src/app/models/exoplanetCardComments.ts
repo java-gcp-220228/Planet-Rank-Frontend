@@ -1,6 +1,7 @@
 export interface ExoplanetCardComments{
-    authorId: number;
     comment: string;
+    authorId: number;
+    exoplanetId: number;
     
     
 }
