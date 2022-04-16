@@ -11,7 +11,6 @@ export class NavBarComponent implements OnInit {
   loginService!: LoginService;
   constructor() {}
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
   loggedIn() {

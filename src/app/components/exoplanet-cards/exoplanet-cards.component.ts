@@ -49,10 +49,12 @@ export class ExoplanetCardsComponent implements OnInit {
 
 
   postComment(exoId: number, commentInput:string){
-  this.http.post<ExoplanetCardComments>('http://localhost:8080/1/'+ exoId, {"comment" : commentInput}).subscribe(data => {}
+    exoId = exoId +1;
+  this.http.post<ExoplanetCardComments>('http://localhost:8080/1/' + exoId, {"comment" : commentInput}).subscribe(data => {}
    
   )
   alert("Posted Comment!"); 
+  window.location.reload();
 }
 
   getNewLike(likeCount: number){
