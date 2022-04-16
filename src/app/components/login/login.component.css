@@ -1,3 +1,18 @@
+label {
+    padding: 10px;
+    color: #C9FFE2;
+}
+
+input {
+    margin: 10px;
+    border-radius: 10px;
+    transition: all 300ms ease-in;
+    height: 25px;
+    border: none;
+    background-color: #005E7C;  
+    outline: none;  
+}
+
 .login {
     width: 100%;
     height: 80vh;
@@ -21,10 +36,6 @@
     height: 50%;
 }
 
-.login-header h5 {
-    color: #C9FFE2;
-}
-
 .login-credentials {
     height: 35%;
     display: flex;
@@ -32,30 +43,18 @@
     justify-content: space-around;
 }
 
-label {
-    padding: 10px;
+.login-header h5 {
     color: #C9FFE2;
-}
-
-input {
-    margin: 10px;
-    border-radius: 10px;
-    transition: all 300ms ease-in;
-    height: 25px;
-    border: none;
-    background-color: #005E7C;  
-    outline: none;  
-}
-
-.login-credentials input:focus{
-    box-shadow: 1px 1px 5px 1px #C9FFE2;
-    border: 2px solid #809848;
 }
 
 .login-container h5 {
     align-self: center;
     justify-self: center;
     padding: 20px;
+}
+
+.login-credentials input:focus{
+    border: 1px solid #809848;
 }
 
 #login-button {
@@ -78,5 +77,128 @@ input {
     box-shadow: 1px 1px 15px 5px #809848;
 }
 
+/* ##############################################################################################
+Sign - Up
+*/
+
+.sign-up-container {
+    background-color: black;
+    display: flex;
+    width: 35%;
+    height: 70%;
+    padding: 20px 0px;
+    border: 3px solid #C9FFE2;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 400ms ease-out;
+}
+
+.sign-up-header {
+    height: 50%;
+}
+
+.sign-up-header h5 {
+    color: #C9FFE2;
+}
+
+.sign-up-credentials {
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sign-up-container h5 {
+    align-self: center;
+    justify-self: center;
+    padding: 20px;
+}
+
+.sign-up-credentials input:focus{
+    border: 1px solid #C9FFE2;
+}
+
+#sign-up-button {
+    outline: none;
+}
+
+#sign-up-button {
+    align-self: center;
+    width: 15%;
+    color: #C9FFE2;
+}
+
+#sign-up-button:hover {
+    box-shadow: 1px 1px 20px 5px #005E7C;
+    border: none;
+    border-radius: 35px;
+}
+
+.sign-up-container:hover {
+    box-shadow: 1px 1px 15px 5px #005E7C;
+}
 
 
+/* ##############################################################################################
+Sign - Up
+*/
+
+.back-button-for-login-page-container{
+    background-color: black;
+    display: flex;
+    width: 35%;
+    height: 70%;
+    padding: 20px 0px;
+    border: 3px solid #005E7C;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 400ms ease-out;
+}
+
+.default-container {
+    background-color: black;
+    display: flex;
+    width: 35%;
+    height: 70%;
+    padding: 20px 0px;
+    border: 3px solid #005E7C;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 400ms ease-out;
+}
+
+.default-container h1 {
+    align-self: center;
+    justify-self: center;
+    padding: 20px;
+    color: #C9FFE2;
+}
+
+.user-buttons-container{
+    padding-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.default-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.default-button {
+    outline: none;
+    align-self: center;
+    width: 15%;
+    color: #C9FFE2;
+}
+
+.default-button:hover {
+    box-shadow: 1px 1px 20px 5px #005E7C;
+    border: none;
+    border-radius: 35px;
+}
