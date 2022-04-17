@@ -1,0 +1,90 @@
+img {
+    position: relative;
+    float: left;
+    width: 50%;
+    margin-left: 15%;
+    box-shadow: 0 0 10px 5px #414141;
+    margin-bottom: 50px;
+}
+.comment-container {
+    float: right;
+    margin-right: 10%;
+}
+
+
+.container {
+    background-color: #eef2f5;
+    width: 400px
+}
+
+.addtxt {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 13px;
+    width: 350px;
+    background-color: rgb(49, 49, 49);
+    font-weight: 1.5px;
+    color: white;
+}
+
+.form-control focus {
+    color: #000
+}
+
+.second {
+    width: 350px;
+    background-color: rgb(49, 49, 49);
+    border-radius: 4px;
+    box-shadow: 10px 10px 5px #00ee43
+}
+
+.text1 {
+    font-size: 13px;
+    font-weight: 500;
+    color: #ffffff
+}
+
+.text2 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 6px;
+    color: #ffffff
+}
+
+.text3 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 4px;
+    color: #ffffff
+}
+
+.text3o {
+    color: #00a5f4
+}
+
+.text4 {
+    font-size: 13px;
+    font-weight: 500;
+    color: #828386
+}
+
+.text4i {
+    color: #00a5f4
+}
+
+.text4o {
+    color: white
+}
+.author-name {
+    color: rgb(61, 255, 123);
+}
+.submit-btn {
+    position: relative;
+    background-color: rgb(126, 247, 174);
+    width: 350px;
+    border-radius: 5px;
+    color: black;
+    font-weight: 1.5px;
+    box-shadow: 0 0 5px 5px #ffffff;
+}

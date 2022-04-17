@@ -1,7 +1,7 @@
 <div class="image-gallery-container">
 <div *ngFor="let image of images" class="gallery">
-
-    <img [src]="image.thumbUrl" [alt]="image.title" (click)="getOrigUrl(image.origUrl)">
-
+    <a [routerLink]="'/image-comments'">
+        <img [src]="image.thumbUrl" [alt]="image.title" [id]="image.nasaId" (click)="setImageInfo(image)" >       <!-- (click)="getOrigUrl(image.origUrl)"> -->
+    </a>
 </div>
 </div>
