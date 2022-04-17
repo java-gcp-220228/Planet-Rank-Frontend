@@ -1,56 +1,41 @@
-
-
-    <div class = "rows">
-
-
-      <div *ngFor = "let post of exoCards | async; let indexOfElement = index" class="flip-card"  >
-           <div class="flip-card-inner">
-               <div class="flip-card-front">
-                 <h1 class = "front-h1">{{post.planetName}}</h1>
-                 <p>Card Rank:  &nbsp;&nbsp;{{post.cardRank}}</p>
-               </div>
-               <div class="flip-card-back">
-                <div role="document" class="modal-dialog" id = "change-modal-{{indexOfElement}}">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h4 class="modal-title">{{post.planetName}} Comments</h4>
-                      <button type="button" class="close-btn" (click)="closeModal(indexOfElement)">Close</button>
-                    </div>
-                    <div class="modal-body">
-                      <div *ngFor = "let comment of post.comments; let indexOfElement = index">
-                      
-                    
-                        <p>{{comment.comment}}</p>
-                       
-                       </div> 
-                    </div>
-                    <div *ngIf="loggedIn" class="modal-footer">
-                        <input type = "text" id = "newComment" placeholder="Add a comment....." #usercomment>  
-                      <button type="button" class="newComment-btn" (click)="postComment(indexOfElement,usercomment.value)">Post</button>
-                    </div>
-
-                    
-                    
-                </div>
-                <div id = "hideThis-{{indexOfElement}}">
-                 <p>Host Name:  &nbsp;&nbsp;{{post.hostName}}</p>
-                   <p>NumberOfStars:  &nbsp;{{post.numberOfStars}}</p>
-                     <p>Discovery Year:  &nbsp; &nbsp;{{post.discoverYear}}</p>
-                       <p>Planet Mass:  &nbsp;&nbsp;{{post.planetMass}} times larger than earth</p>
-                         <p>Distance From Earth:  &nbsp;&nbsp;{{post.distanceFromEarth}} light years</p>
-                        
-                        <div class = "btns">
-                          <button class = "like-btn" id = "disable-{{indexOfElement}}" (click)="likeBtn(indexOfElement)" (click)="disableBtn(indexOfElement)">Like {{post.likeCount}}</button>
-                          <button class = "like-btnn" id = "enable-{{indexOfElement}}" >Liked! {{post.likeCount + 1}}</button>
-                        <button class = "comment-btn" (click)="showModal(indexOfElement)">Comments</button>
-
-                        </div>
-                      </div>
-                           
-               </div>
-             </div>
-             
-                
-           </div>
-     
-         </div>
+<div class = "rows">
+  <div *ngFor = "let post of exoCards | async; let indexOfElement = index" class="flip-card"  >
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <h1 class = "front-h1">{{post.planetName}}</h1>
+        <p>Card Rank:  &nbsp;&nbsp;{{post.cardRank}}</p>
+      </div>
+      <div class="flip-card-back">
+        <div role="document" class="modal-dialog" id = "change-modal-{{indexOfElement}}">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">{{post.planetName}} Comments</h4>
+              <button type="button" class="close-btn" (click)="closeModal(indexOfElement)">Close</button>
+            </div>
+            <div class="modal-body">
+              <div *ngFor = "let comment of post.comments; let indexOfElement = index">
+                <p>{{comment.comment}}</p>
+              </div> 
+            </div>
+            <div *ngIf="loggedIn" class="modal-footer">
+              <input type = "text" id = "newComment" placeholder="Add a comment....." #usercomment>  
+              <button type="button" class="newComment-btn" (click)="postComment(indexOfElement,usercomment.value)">Post</button>
+            </div>
+          </div>
+        </div>
+        <div id = "hideThis-{{indexOfElement}}">
+          <p>Host Name:  &nbsp;&nbsp;{{post.hostName}}</p>
+          <p>NumberOfStars:  &nbsp;{{post.numberOfStars}}</p>
+          <p>Discovery Year:  &nbsp; &nbsp;{{post.discoverYear}}</p>
+          <p>Planet Mass:  &nbsp;&nbsp;{{post.planetMass}} times larger than earth</p>
+          <p>Distance From Earth:  &nbsp;&nbsp;{{post.distanceFromEarth}} light years</p>
+          <div class = "btns">
+            <button class = "like-btn" id = "disable-{{indexOfElement}}" (click)="likeBtn(indexOfElement)" (click)="disableBtn(indexOfElement)">Like {{post.likeCount}}</button>
+            <button class = "like-btnn" id = "enable-{{indexOfElement}}" >Liked! {{post.likeCount + 1}}</button>
+            <button class = "comment-btn" (click)="showModal(indexOfElement)">Comments</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -148,7 +148,7 @@ justify-content: space-between;
   cursor: pointer;
 }
 .modal-footer{
-  background-color: black;
+  background-color: white;
 }
 .newComment-btn{
   color: white;
@@ -157,4 +157,3 @@ justify-content: space-between;
   color: purple;
   cursor: pointer;
 }
-
