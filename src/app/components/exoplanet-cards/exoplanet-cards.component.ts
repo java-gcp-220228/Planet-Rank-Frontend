@@ -9,6 +9,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import { ExoplanetLikes } from 'app/models/ExoplanetLikes';
 import { MDBModalRef } from 'ng-uikit-pro-standard';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { environment } from 'environments/environment';
 
 declare const window:any;
 @Component({
@@ -18,7 +19,6 @@ declare const window:any;
 })
 export class ExoplanetCardsComponent implements OnInit {
   formModal:any;
-  readonly BACKEND_URL = 'http://localhost:8080';
   exoCards!: Observable<ExoplanetCards[]>;
   exoCardComment: any;
   exoplanetLikeId: any;
@@ -36,7 +36,7 @@ export class ExoplanetCardsComponent implements OnInit {
    }
 
   getPosts(){
-    this.exoCards = this.http.get<ExoplanetCards[]>(this.BACKEND_URL + '/exoplanets');
+    this.exoCards = this.http.get<ExoplanetCards[]>(`${environment.BACKEND_URL}` + '/exoplanets');
   }
 
   disableBtn(num: number){
@@ -52,7 +52,7 @@ export class ExoplanetCardsComponent implements OnInit {
 
   postComment(exoId: number, commentInput:string){
     exoId = exoId +1;
-  this.http.post<ExoplanetCardComments>('http://localhost:8080/1/' + exoId, {"comment" : commentInput}).subscribe(data => {}
+  this.http.post<ExoplanetCardComments>(`${environment.BACKEND_URL}` + '/1/' + exoId, {"comment" : commentInput}).subscribe(data => {}
    
   )
   alert("Posted Comment!"); 
@@ -66,7 +66,7 @@ export class ExoplanetCardsComponent implements OnInit {
 
     exoId = exoId +1;
     console.log(exoId);
-    this.http.post<ExoplanetLikes>('http://localhost:8080/like', {"exoplanetId" : exoId}).subscribe(data => {
+    this.http.post<ExoplanetLikes>(`${environment.BACKEND_URL}` + '/like', {"exoplanetId" : exoId}).subscribe(data => {
 
   })
   

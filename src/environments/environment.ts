@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
 
-  BACKEND_URL: "http://localhost:8080" // backend url to use
+  BACKEND_URL: "http://34.82.80.154:8065" // backend url to use
 };
 
 /*

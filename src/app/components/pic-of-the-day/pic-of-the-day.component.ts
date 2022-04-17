@@ -37,6 +37,8 @@ export class PicOfTheDayComponent implements OnInit {
     })
   }
 
+  
+
 //  getPictureOfTheDay(){
 //     // fecth image object from service
 //     // this.pod = await this.pictureOfTheDayService.getImage();

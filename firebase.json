@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/planet-rank",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
