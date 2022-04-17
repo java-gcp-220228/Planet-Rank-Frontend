@@ -11,11 +11,17 @@ export class LoginComponent implements OnInit {
 
   errorMessage!: string;
   loginForm!: FormGroup;
+  signUpForm!: FormGroup;
+  loginOrSignUpChoice: string = "default";
 
   constructor(private fb: FormBuilder, private loginService: LoginService)  {}
   
   ngOnInit(): void {
     this.loginForm = this.fb.group({
+      username: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
+    });
+    this.signUpForm = this.fb.group({
       username: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required),
     });
@@ -29,5 +35,28 @@ export class LoginComponent implements OnInit {
     const user = this.loginForm.value;
     this.loginService.authenticateUser(user.username, user.password);
   }
+
+  signUpUser() {
+    const user = this.signUpForm.value;
+    console.log(user);
+    this.loginService.createUser(user.username, user.password);
+  }
+
+  signUpUserDefault() {
+    this.loginOrSignUpChoice = 'sign-up';
+  }
+
+  loginUserDefault() {
+    this.loginOrSignUpChoice = 'login';
+  }
+
+  changeToSignUp() {
+    this.loginOrSignUpChoice = 'sign-up';
+  }
+
+  changeToLogin() {
+    this.loginOrSignUpChoice = 'login';
+  }
+
 
 }

@@ -1,8 +1,9 @@
-<section class="login">
+<section class="login" [ngSwitch]="loginOrSignUpChoice">
     
-    <div class="login-container">
+    <div class="login-container" *ngSwitchCase="'login'">
         <div class="login-header">
-            <h1>Enter Username & Password</h1>
+            <h1>Login</h1>
+            <h5>[Enter Username & Password]</h5>
         </div>
         <form class="login-credentials" [formGroup]="loginForm">
             <div class="credentials-username">
@@ -13,8 +14,41 @@
                 <label for="password">Password</label>
                 <input id="password" type="password" formControlName="password"/>
             </div>
-            <button (click)="loginUser()" id="login-button">Login</button>
+            <div class="user-buttons-container">
+                <button (click)="changeToSignUp()" class="default-button">Sign Up!</button>
+                <button (click)="loginUser()" id="login-button">Login</button>
+            </div>
         </form>
     </div>
+
+    <div class="sign-up-container" *ngSwitchCase="'sign-up'">
+        <div class="sign-up-header">
+            <h1>Sign Up</h1>
+            <h5>[Create Username & Password]</h5>
+        </div>
+        <form class="sign-up-credentials" [formGroup]="signUpForm">
+            <div class="credentials-username">
+                <label for="username">Username</label>
+                <input id="username" type="text" formControlName="username"/>
+            </div>
+            <div class="credentials-password">
+                <label for="password">Password</label>
+                <input id="password" type="password" formControlName="password"/>
+            </div>
+            <div class="user-buttons-container">
+                <button (click)="changeToLogin()" class="default-button">Login</button>
+                <button (click)="signUpUser()" id="sign-up-button">Sign up</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="default-container" *ngSwitchDefault>
+        <h1>Greetings, Traveler!</h1>
+        <div class="default-button-container">
+            <button (click)="loginUserDefault()" class="default-button" id="login-button-default">Login</button>
+            <button (click)="signUpUserDefault()" class="default-button" id="sign-up-button-default">Sign up</button>
+        </div>
+    </div>
+    
     
 </section>
