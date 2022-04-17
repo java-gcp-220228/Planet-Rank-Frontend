@@ -1,8 +1,11 @@
+
 <div class="img-container">
+    <h3>{{ imageInfo.title }}</h3>
     <a (click)="getOrigUrl(imgLink.src)">
         <img #imgLink [src] = "largeUrl" />
     </a>
 </div>
+
 <div class="comment-container">
     <div class="container justify-content-center mt-5 border-left border-right">
         <div class="d-flex justify-content-center pt-3 pb-2">
@@ -19,4 +22,5 @@
         </div>
     </div>
 </div>
+
 

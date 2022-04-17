@@ -42,8 +42,9 @@ export class ImageCommentsComponent implements OnInit {
       console.log(this.userJson);
       this.userName = this.userJson.username;
       this.userId = this.userJson.userId;
-
+      this.member = true;
     } catch (e) {
+      console.log('e: ' + e)
       this.member = false;
     }
     
@@ -53,7 +54,7 @@ export class ImageCommentsComponent implements OnInit {
     this.nasaId = this.imageInfo.nasaId;
     console.log(this.imageInfo)
     console.log(this.imageInfo.nasaId)
-    // var title = imageInfo.title;
+    var title = this.imageInfo.title;
     // var desc = imageInfo.description;
     // var thumbUrl = imageInfo.thumbUrl;
     this.largeUrl = this.imageInfo.largeUrl;
@@ -78,8 +79,8 @@ export class ImageCommentsComponent implements OnInit {
   sendComment(com: any) {
     if (this.member) {
       this.comment = com.value;
-    console.log(this.comment);
-    this.http.post<ImageComment>('http://34.82.80.154:8065/images/'+this.nasaId +'/'+ this.userId,
+      console.log(this.comment);
+      this.http.post<ImageComment>('http://34.82.80.154:8065/images/'+this.nasaId +'/'+ this.userId,
     {
       author_id: this.userId,
       author_name: this.userName,
@@ -87,8 +88,11 @@ export class ImageCommentsComponent implements OnInit {
       nasa_id: this.nasaId,
       upload_date: new Date().getTime()
     }
-    ).subscribe()
-    this.getComments();
+      ).subscribe((res) => {
+        this.getComments()
+      }
+        );
+    
     } else {
       alert("Please login or sign up to add a comment. Thank you.")
     }
