@@ -2,7 +2,7 @@ img {
     position: relative;
     float: left;
     width: 50%;
-    margin-left: 15%;
+    margin-left: 100px;
     box-shadow: 0 0 10px 5px #414141;
     margin-bottom: 50px;
 }
@@ -36,7 +36,7 @@ img {
     width: 350px;
     background-color: rgb(49, 49, 49);
     border-radius: 4px;
-    box-shadow: 1px 1px 8px 3px #00ee43;
+    box-shadow:  0 0 5px #00ee43;
 }
 
 .text1 {
@@ -86,5 +86,17 @@ img {
     border-radius: 5px;
     color: black;
     font-weight: 1.5px;
+    /* box-shadow: 0 0 5px 5px #ffffff; */
+}
+
+.submit-btn:hover {
     box-shadow: 0 0 5px 5px #ffffff;
+}
+
+h3 {
+    position: relative;
+    font-size: 20px;
+    color:rgb(172, 246, 215);
+    margin-left: 100px;
+    text-align: left;
 }
