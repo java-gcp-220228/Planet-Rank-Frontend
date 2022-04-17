@@ -54,8 +54,8 @@ export class LoginComponent implements OnInit {
     this.loginOrSignUpChoice = 'sign-up';
   }
 
-  changeToLogin() {
-    this.loginOrSignUpChoice = 'login';
+  changeToDefault() {
+    this.loginOrSignUpChoice = 'default';
   }
 
 
