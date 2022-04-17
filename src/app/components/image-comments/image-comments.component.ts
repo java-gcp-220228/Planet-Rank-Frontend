@@ -16,7 +16,7 @@ import { ImageService } from '../../services/image.service';
 
 export class ImageCommentsComponent implements OnInit {
   imageComments!: Observable<ImageComment[]>;
-  readonly BACKEND_URL = 'http://localhost:8080';
+  readonly BACKEND_URL = 'http://34.82.80.154:8065/';
   nasaId!: any;
   largeUrl!: string; 
   imageInfo: any;
@@ -27,19 +27,26 @@ export class ImageCommentsComponent implements OnInit {
   userId: any;
   userJson: any;
   comment: any;
+  member!: boolean;
 
   getComments(){
     // this.nasaId = "nasaID"
-    this.imageComments = this.http.get<any>(this.BACKEND_URL + '/images/' + this.nasaId + '/comments');
+    this.imageComments = this.http.get<any>(this.BACKEND_URL + 'images/' + this.nasaId + '/comments');
     console.log(this.imageComments);
   }
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private imageService: ImageService) { 
-    this.userInfo = localStorage.getItem('user_info');
-    this.userJson = JSON.parse(this.userInfo);
-    console.log(this.userJson);
-    this.userName = this.userJson.username;
-    this.userId = this.userJson.userId;
+    try {
+      this.userInfo = localStorage.getItem('user_info');
+      this.userJson = JSON.parse(this.userInfo);
+      console.log(this.userJson);
+      this.userName = this.userJson.username;
+      this.userId = this.userJson.userId;
+
+    } catch (e) {
+      this.member = false;
+    }
+    
 
     this.imageInfo = this.imageService.getImageInfo();
 
@@ -69,9 +76,10 @@ export class ImageCommentsComponent implements OnInit {
   }
 
   sendComment(com: any) {
-    this.comment = com.value;
+    if (this.member) {
+      this.comment = com.value;
     console.log(this.comment);
-    this.http.post<ImageComment>('http://localhost:8080/images/'+this.nasaId +'/'+ this.userId,
+    this.http.post<ImageComment>('http://34.82.80.154:8065/images/'+this.nasaId +'/'+ this.userId,
     {
       author_id: this.userId,
       author_name: this.userName,
@@ -81,6 +89,10 @@ export class ImageCommentsComponent implements OnInit {
     }
     ).subscribe()
     this.getComments();
+    } else {
+      alert("Please login or sign up to add a comment. Thank you.")
+    }
+    
   }
 
   getOrigUrl(url: string) {
