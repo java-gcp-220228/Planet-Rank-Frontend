@@ -45,18 +45,24 @@ To-do list:
 
 ## Usage
 
-Landing Page
-![Landing Page](https://user-images.githubusercontent.com/79622822/162825118-aaf10913-eb1b-4cf4-b1c0-45373e661b1f.png)
 Login Page
-![Login](https://user-images.githubusercontent.com/79622822/162826593-92325a9d-b037-4385-9ed1-6d608b013f56.png)
-Exoplanet Cards
-![Exoplanet Cards](https://user-images.githubusercontent.com/79622822/162826806-d82ebd6c-ace0-4185-8528-6d4f9796d100.png)
-Card Comments
-![Card Comments](https://user-images.githubusercontent.com/79622822/162827940-a8d67c92-e2ca-4594-a0b2-4e7497b36fdf.png)
-Gallery
-![Gallery](https://user-images.githubusercontent.com/79622822/162826687-d3ca8599-4181-4b5f-b232-391b323499ba.png)
+![login_page](https://user-images.githubusercontent.com/40347155/164034705-bab2332d-d648-4e72-b58f-f1eca0ea9c19.JPG)
+Login Signup
+![login_signup](https://user-images.githubusercontent.com/40347155/164034756-aa1d7cb4-1f1a-428f-bc34-47e00dceff1d.JPG)
+Login Login
+![login_login](https://user-images.githubusercontent.com/40347155/164034739-b8ffba6f-7b72-45dd-9ef9-5bb193f60a49.JPG)
+Exoplanets Page
+![exoplanets_page](https://user-images.githubusercontent.com/40347155/164034823-6dcf9d96-d45f-4a02-87f3-e99e2603ac22.JPG)
+Exoplanet Comments
+![exoplanets_comments](https://user-images.githubusercontent.com/40347155/164034834-429f4228-4134-48a9-b597-d3ed63a88ad2.JPG)
+Gallery Page
+![gallery](https://user-images.githubusercontent.com/40347155/164034851-ece3bc90-c07a-4ece-9ea3-c5d672d5c953.JPG)
 Gallery Comments
-![Gallery Comments](https://user-images.githubusercontent.com/79622822/162827940-a8d67c92-e2ca-4594-a0b2-4e7497b36fdf.png)
+![gallery_comments](https://user-images.githubusercontent.com/40347155/164034879-a5ffde70-7308-4d7f-9d28-8fb82676e94b.JPG)
+Landing Page - Picture of The Day
+![landingPage_POD](https://user-images.githubusercontent.com/40347155/164034902-88024bc6-7303-491c-8b65-cd6ced2f4a90.JPG)
+
+
 
 ## Contributors
   - Javanshir Pashayev
